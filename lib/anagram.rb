@@ -8,16 +8,14 @@ def initialize (word)
 end
 
 def match (word_array)
-	final_array = []
-	word_array.each do |item|
-		if @word == item.split("").sort.join
-			final_array << item
+	word_array.select do |item|
+		if @word.split("").sort.join == item.split("").sort.join
+			item
 		end
 
 	end
-	final_array
+	
 end
 
-#completed anagram
 
 end
